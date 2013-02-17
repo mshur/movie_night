@@ -25,7 +25,7 @@
 
         <div class="right">
           <div class="suggest">
-             <%= link_to 'Suggest a Movie', new_movie_path%>
+             <%= link_to 'Suggest a Movie', new_movie_path(:event_id => @event.id) %>
           </div>
         </div>
 
@@ -33,15 +33,15 @@
 
       
       
-      
+      <% @movies.each do |movie| %>
         <li>
           <div class="movie_holder">
             <div class="movie_title">
-              <a href="#">Movie Title</a>
+              <%= link_to movie.title, movie.link, :target => "_blank" %>
             </div>
             <div class="description_holder">
               <div class="movie_description">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                <%= movie.notes %>
               </div>
 
               <div class="voter">
@@ -52,25 +52,8 @@
             </div>
           </div>
         </li>
-
-        <li>
-          <div class="movie_holder">
-            <div class="movie_title">
-              <a href="#">Movie Title</a>
-            </div>
-            <div class="description_holder">
-              <div class="movie_description">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              </div>
-
-              <div class="voter">
-                <%= image_tag("up.png", :alt => "vote up") %>
-                1
-                <%= image_tag("down.png", :alt => "vote down") %>
-              </div>
-            </div>
-          </div>
-        </li>
+      <% end %>
+        
 
 
 

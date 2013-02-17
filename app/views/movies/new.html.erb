@@ -11,6 +11,7 @@
 <div class="inner-wrap">
   <%= form_for @movie do |f| %>
 
+<%= f.hidden_field :event_id %>
   <div class="select">
     Movie Title:
     <%= f.text_field :title %>

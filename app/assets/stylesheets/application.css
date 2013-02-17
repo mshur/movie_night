@@ -59,6 +59,7 @@ li {
 .description_holder{
   background: url(/assets/white.png);
   float:left;
+  
   width:367px;
   margin-left:15px;
   border-bottom: 2px solid #9c3e33;

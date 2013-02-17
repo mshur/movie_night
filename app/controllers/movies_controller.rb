@@ -4,13 +4,17 @@ class MoviesController < ApplicationController
   end
 
   def new
-    @movie = Movie.new
+    @movie = Movie.new(:event_id => params[:event_id])
     @id = params[:id]
+
+
   end
 
   def create
-    @movie = Movie.create(params[:event])
-    render :action => :show
+    @movie = Movie.create(params[:movie])
+    redirect_to event_path(@movie.event)
+
+
   end
 
   def edit
@@ -19,7 +23,7 @@ class MoviesController < ApplicationController
 
   def update
     @movie = Movie.find(params[:id])
-    @movie.update_attributes(params[:event])
+    @movie.update_attributes(params[:movie])
   end
 
   def destroy
@@ -29,6 +33,7 @@ class MoviesController < ApplicationController
 
   def show
     @movie = Movie.find(params[:id])
+
   end
 
   
