@@ -1,0 +1,90 @@
+
+
+     <div class="date_time">
+      <div class="return">
+        <%= link_to "Return",  events_path %>
+      </div>
+      <div class="actual_date">
+        <%= @event.date.strftime("%A, %B %d") %>
+        <%= @event.time.strftime(" at %l:%M %p") %>
+      </div>
+    </div>
+   
+
+    <div class="movie_night_notes">
+      <%= @event.notes %>
+    </div>
+
+
+
+    <div class="movie_list">
+      <div class="title">
+        <div class="left">
+          Movie Suggestions
+        </div>
+
+        <div class="right">
+          <div class="suggest">
+             <%= link_to 'Suggest a Movie', new_movie_path%>
+          </div>
+        </div>
+
+      </div>
+
+      
+      
+      
+        <li>
+          <div class="movie_holder">
+            <div class="movie_title">
+              <a href="#">Movie Title</a>
+            </div>
+            <div class="description_holder">
+              <div class="movie_description">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </div>
+
+              <div class="voter">
+                <%= image_tag("up.png", :alt => "vote up") %>
+                1
+                <%= image_tag("down.png", :alt => "vote down") %>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div class="movie_holder">
+            <div class="movie_title">
+              <a href="#">Movie Title</a>
+            </div>
+            <div class="description_holder">
+              <div class="movie_description">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </div>
+
+              <div class="voter">
+                <%= image_tag("up.png", :alt => "vote up") %>
+                1
+                <%= image_tag("down.png", :alt => "vote down") %>
+              </div>
+            </div>
+          </div>
+        </li>
+
+
+
+        
+      
+    
+    </div>
+
+
+
+    <div class="spacer"></div>
+
+
+
+
+
+

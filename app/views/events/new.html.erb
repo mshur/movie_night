@@ -1,0 +1,30 @@
+
+  <div class="title">
+    Create a New Event
+  </div>
+
+  <%= form_for @event do |f| %>
+
+    <div class="select">
+      Date:
+      <%= f.date_select :date %>
+    </div>
+
+    <div class="select">
+      Time:
+      <%= f.time_select :time %>
+    </div>
+
+    <div class="select">
+      Notes:
+      <%= f.text_area :notes %>
+    </div>
+
+    <div class="select">
+      <%= f.submit "Save", :class=>"save_btn" %>
+    </div>
+
+
+
+  <% end %>
+

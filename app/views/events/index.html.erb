@@ -1,0 +1,22 @@
+<div class="logo"></div>
+
+    <div class="night_list">
+     <ul>
+       <% @events.each do |event| %>
+         <li><%= link_to event.date.strftime("%m/%d/%y"),  event_path(event) %>
+         </li>
+       <% end %>
+
+     </ul>
+    </div>
+
+
+
+  <div class="new_event_link">
+  <%= link_to "New Event", new_event_path %>
+
+
+
+
+
+  </div>

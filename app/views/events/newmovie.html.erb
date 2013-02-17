@@ -1,0 +1,43 @@
+<div id="wrap">
+   <div class="top"></div>
+  <div class="paper">
+
+  <div class="title">
+    Suggest a Movie
+  </div>
+  <div class="spacer"></div>
+<div class="inner-wrap">
+  <%= form_for @movie do |f| %>
+
+    <div class="select">
+      Movie Title:
+      <%= f.text_field :title %>
+    </div>
+
+    <div class="select">
+      Link:
+      <%= f.text_field :link %>
+    </div>
+
+    <div class="select">
+      Notes:
+      <%= f.text_area :notes %>
+    </div>
+
+    
+
+    <%= :data %>
+  
+
+    <div class="select">
+      <%= f.submit "Save", :class=>"save_btn" %>
+    </div>
+
+
+
+  <% end %>
+</div>
+
+</div>
+<div class="bottom"></div>
+</div>
